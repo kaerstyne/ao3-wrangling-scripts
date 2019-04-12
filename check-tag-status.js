@@ -2,7 +2,7 @@
 // @name         AO3: [Wrangling] Check Tag Status
 // @description  Adds a button to check if tags in your wrangling bins are in draft, on unrevealed works, etc.
 // @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
-// @version      1.1
+// @version      1.1.1
 // @author       kaerstyne
 // @match        *://*.archiveofourown.org/tags/*/wrangle?*&status=unwrangled
 // @match        *://*.archiveofourown.org/tag_wranglings*
