@@ -13,6 +13,8 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 ## Highlight Old Tags
 
+![the Highlight Old Tags script in use](screenshots/highlight-old-tags.png)
+
 ### Features
 
 - Highlights the created date of older tags in your unwrangled bins, to help prioritize tags that have been sitting around for longer.
@@ -21,11 +23,15 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 ## Save Changes at Top
 
+![the Save Changes at Top script in use](screenshots/save-changes-at-top.png)
+
 ### Features
 
 - On tag edit pages, adds a second Save Changes button at the top of the screen, so you don't have to scroll down to the bottom.
 
 ## Wrangling Home Filter Redux
+
+![the Wrangling Home Filter Redux script in use](screenshots/wrangling-home-filter-redux.png)
 
 ### Features
 
@@ -48,6 +54,10 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 | all fandoms | show all fandoms, whether they have unwrangled tags or not |
 
 ## Check Tag Status
+
+![the new button added by the Check Tag Status script](screenshots/check-tag-status1.png)
+
+![the Check Status Script's output after the button is pressed](screenshots/check-tag-status2.png)
 
 ### Features
 
