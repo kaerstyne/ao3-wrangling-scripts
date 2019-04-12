@@ -1,15 +1,11 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Check Tag Status
 // @description  Adds a button to check if tags in your wrangling bins are in draft, on unrevealed works, etc.
-// @namespace    https://greasyfork.org
+// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
 // @version      1.1
 // @author       kaerstyne
-// @match        http://archiveofourown.org/tags/*/wrangle?*&status=unwrangled
-// @match        https://archiveofourown.org/tags/*/wrangle?*&status=unwrangled
-// @match        http://insecure.archiveofourown.org/tags/*/wrangle?*&status=unwrangled
-// @match        http://archiveofourown.org/tag_wranglings*
-// @match        https://archiveofourown.org/tag_wranglings*
-// @match        http://insecure.archiveofourown.org/tag_wranglings*
+// @match        *://*.archiveofourown.org/tags/*/wrangle?*&status=unwrangled
+// @match        *://*.archiveofourown.org/tag_wranglings*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
 // @grant        none
 // ==/UserScript==

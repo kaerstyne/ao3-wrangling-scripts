@@ -1,12 +1,10 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Wrangling Home Filter Redux
 // @description  A variation on the Wrangling Home Filter script that lets you filter by cowrangled or solo-wrangled fandoms.
-// @namespace    https://greasyfork.org
+// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
 // @version      1.0
 // @author       kaerstyne
-// @match        https://archiveofourown.org/tag_wranglers/*
-// @match        http://archiveofourown.org/tag_wranglers/*
-// @match        http://insecure.archiveofourown.org/tag_wranglers/*
+// @match        *://*.archiveofourown.org/tag_wranglers/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
 // @grant        none
 // ==/UserScript==
@@ -14,8 +12,7 @@
 
 // SETTINGS //
 
-// Add a list of your cowrangled fandoms here, between the ``.
-// DO NOT EDIT ANYTHING OUTSIDE OF THE ``.
+// Add a list of your cowrangled fandoms below! Replace the example fandoms with your own.
 // Put each fandom on a separate line.
 // Use the EXACT NAME of the fandom as it appears on your wrangling page.
 

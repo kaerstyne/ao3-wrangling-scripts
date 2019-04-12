@@ -1,12 +1,11 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Highlight Old Tags
-// @description  Highlights the created date of older tags on the unwrangled tags pages. Customizable.
-// @namespace    https://greasyfork.org/en/scripts/38866-ao3-wrangling-highlight-old-tags
+// @description  Highlights the created date of older tags in your unwrangled bins.
+// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
 // @version      1.1
 // @author       kaerstyne
-// @match        *archiveofourown.org/tags/*/wrangle?*&status=unwrangled
-// @match        *insecure.archiveofourown.org/tags/*/wrangle?*&status=unwrangled
-// @require      https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+// @match        *://*.archiveofourown.org/tags/*/wrangle?*&status=unwrangled
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
 // @grant        none
 // ==/UserScript==
 
@@ -30,7 +29,6 @@ var age_older = 7;
 var age_oldest = 14;
 
 // END OF SETTINGS //
-
 
 
 // DO THE THING //
