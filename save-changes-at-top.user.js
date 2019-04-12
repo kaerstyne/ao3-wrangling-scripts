@@ -2,8 +2,8 @@
 // @name         AO3: [Wrangling] Save Changes at Top
 // @description  Adds another Save Changes button at the top of the tag edit page.
 // @version      1.1.1
-// @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/save-changes-at-top.js
-// @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/save-changes-at-top.js
+// @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/save-changes-at-top.user.js
+// @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/save-changes-at-top.user.js
 
 // @author       kaerstyne
 // @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts

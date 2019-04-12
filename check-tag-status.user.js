@@ -2,8 +2,8 @@
 // @name         AO3: [Wrangling] Check Tag Status
 // @description  Adds a button to check if tags in your wrangling bins are in draft, on unrevealed works, etc.
 // @version      1.1.1
-// @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.js
-// @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.js
+// @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.user.js
+// @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.user.js
 
 // @author       kaerstyne
 // @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
