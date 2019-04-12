@@ -1,9 +1,14 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Wrangling Home Filter Redux
 // @description  A variation on the Wrangling Home Filter script that lets you filter by cowrangled or solo-wrangled fandoms.
-// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
 // @version      1.0.1
+// @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/wrangling-home-filter-redux.js
+// @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/wrangling-home-filter-redux.js
+
 // @author       kaerstyne
+// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
+// @license      GPL-3.0 <https://www.gnu.org/licenses/gpl.html>
+
 // @match        *://*.archiveofourown.org/tag_wranglers/*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
 // @grant        none

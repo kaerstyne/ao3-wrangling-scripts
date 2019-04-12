@@ -1,9 +1,14 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Check Tag Status
 // @description  Adds a button to check if tags in your wrangling bins are in draft, on unrevealed works, etc.
-// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
 // @version      1.1.1
+// @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.js
+// @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.js
+
 // @author       kaerstyne
+// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
+// @license      GPL-3.0 <https://www.gnu.org/licenses/gpl.html>
+
 // @match        *://*.archiveofourown.org/tags/*/wrangle?*&status=unwrangled
 // @match        *://*.archiveofourown.org/tag_wranglings*
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js

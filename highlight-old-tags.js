@@ -1,9 +1,14 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Highlight Old Tags
 // @description  Highlights the created date of older tags in your unwrangled bins.
-// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
 // @version      1.1.1
+// @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/highlight-old-tags.js
+// @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/highlight-old-tags.js
+
 // @author       kaerstyne
+// @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
+// @license      GPL-3.0 <https://www.gnu.org/licenses/gpl.html>
+
 // @match        *://*.archiveofourown.org/tags/*/wrangle?*&status=unwrangled
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
 // @grant        none
