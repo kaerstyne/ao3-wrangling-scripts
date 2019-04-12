@@ -4,19 +4,14 @@ A collection of userscripts for tag wrangling on [Archive of Our Own](https://ar
 
 If you use any of these and run into problems, feel free to ping me in OTW chat (@Relle) and I will do my best to help you out!
 
-Available Scripts:
-
-- [Highlight Old Tags](#highlight-old-tags)
-- [Save Changes at Top](#save-changes-at-top)
-- [Wrangling Home Filter Redux](#wrangling-home-filter-redux)
-- [Check Tag Status](#check-tag-status)
+| Script | Install | Created | Updated |
+| ------ | ------- | ------- | ------- |
+| [Highlight Old Tags](#highlight-old-tags) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/highlight-old-tags.js) &#124; [Greasyfork](https://greasyfork.org/en/scripts/38866-ao3-wrangling-highlight-old-tags) | 2018-02-24 | [2019-04-12](CHANGELOG.md#highlight-old-tags) |
+| [Save Changes at Top](#save-changes-at-top) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/save-changes-at-top.js) &#124; [Greasyfork](https://greasyfork.org/en/scripts/370820-ao3-wrangling-save-changes-at-top) | 2018-08-01 | [2019-04-12](CHANGELOG.md#save-changes-at-top) |
+| [Wrangling Home Filter Redux](#wrangling-home-filter-redux) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/wrangling-home-filter-redux.js) &#124; [Greasyfork](https://greasyfork.org/en/scripts/381543-ao3-wrangling-wrangling-home-filter-redux) | 2019-04-08 | [2019-04-12](CHANGELOG.md#wrangling-home-filter-redux) |
+| [Check Tag Status](#check-tag-status) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.js) &#124; [Greasyfork](https://greasyfork.org/en/scripts/381677-ao3-wrangling-check-tag-status) | 2019-04-11 | [2019-04-12](CHANGELOG.md#check-tag-status) |
 
 ## Highlight Old Tags
-
-### Installation
-
-- [Github](highlight-old-tags.js)
-- [Greasyfork](https://greasyfork.org/en/scripts/38866-ao3-wrangling-highlight-old-tags)
 
 ### Features
 
@@ -26,21 +21,11 @@ Available Scripts:
 
 ## Save Changes at Top
 
-### Installation
-
-- [Github](save-changes-at-top.js)
-- [Greasyfork](https://greasyfork.org/en/scripts/370820-ao3-wrangling-save-changes-at-top)
-
 ### Features
 
 - On tag edit pages, adds a second Save Changes button at the top of the screen, so you don't have to scroll down to the bottom.
 
 ## Wrangling Home Filter Redux
-
-### Installation
-
-- [Github](wrangling-home-filter-redux.js)
-- [Greasyfork](https://greasyfork.org/en/scripts/381543-ao3-wrangling-wrangling-home-filter-redux)
 
 ### Features
 
@@ -63,11 +48,6 @@ Available Scripts:
 | all fandoms | show all fandoms, whether they have unwrangled tags or not |
 
 ## Check Tag Status
-
-### Installation
-
-- [Github](check-tag-status.js)
-- [Greasyfork](https://greasyfork.org/en/scripts/381677-ao3-wrangling-check-tag-status)
 
 ### Features
 
