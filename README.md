@@ -13,7 +13,7 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 ## Highlight Old Tags
 
-![the Highlight Old Tags script in use](screenshots/highlight-old-tags.png)
+<img src="screenshots/highlight-old-tags.png" alt="the Highlight Old Tags script in use" width="373px" height="231px" />
 
 ### Features
 
@@ -23,7 +23,7 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 ## Save Changes at Top
 
-![the Save Changes at Top script in use](screenshots/save-changes-at-top.png)
+<img src="screenshots/save-changes-at-top.png" alt="the new Save Changes button added by the Save Changes at Top script" width="455px" height="215px" />
 
 ### Features
 
@@ -31,7 +31,7 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 ## Wrangling Home Filter Redux
 
-![the Wrangling Home Filter Redux script in use](screenshots/wrangling-home-filter-redux.png)
+<img src="screenshots/wrangling-home-filter-redux.png" alt="the new options added by the Wrangling Home Filter Redux script" width="457px" height="93px" />
 
 ### Features
 
@@ -55,9 +55,9 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 ## Check Tag Status
 
-![the new button added by the Check Tag Status script](screenshots/check-tag-status1.png)
+<img src="screenshots/check-tag-status1.png" alt="the new button added by the Check Tag Status script" width="478px" height="210px" />
 
-![the Check Status Script's output after the button is pressed](screenshots/check-tag-status2.png)
+<img src="screenshots/check-tag-status2.png" alt="the Check Status Script's output after the button is pressed" width="478px" height="210px" />
 
 ### Features
 
