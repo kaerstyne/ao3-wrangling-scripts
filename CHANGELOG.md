@@ -56,6 +56,11 @@
 
 ## Check Tag Status
 
+### 1.2 - 2019-04-14
+
+- Added a new check to see if a tag is canonical.
+- Added a new check for the fandoms bin to see if a tag is only used on Chinese works.
+
 ### 1.1.1 - 2019-04-12
 
 - Tidied a bit in honor of uploading to GitHub.
