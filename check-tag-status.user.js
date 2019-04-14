@@ -74,15 +74,10 @@ function convertDate(dateStr) {
 
                     // check for Chinese works (fandom bins only)
                     } else if (page_type == "fandoms") {
-                        var all_chinese = true;
-                        $(response).find("div.work dd.language").each(function() {
-                            if ($(this).text() != "中文") {
-                                all_chinese = false;
-                                return false;
-                            }
-                        });
-                        if (all_chinese) {
-                            taggings_cell.append(" [Chinese]")
+
+                        var work_languages = $(response).find("div.work dd.language").toArray();
+                        if (work_languages.every(lang => lang.innerHTML == "中文")) {
+                            taggings_cell.append(" [Chinese]");
                         } else {
                             taggings_cell.append(" [\u2714]");
                         }
@@ -93,7 +88,7 @@ function convertDate(dateStr) {
                         // find the earliest date used on the works
                         var work_dates = $(response).find("div.work p.datetime").map(function() {
                             return convertDate($(this).text());
-                        }).get();
+                        }).toArray();
                         work_dates.sort();
 
                         // compare tag creation date to earliest work date
