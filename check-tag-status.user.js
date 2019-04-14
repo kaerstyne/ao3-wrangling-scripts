@@ -47,7 +47,7 @@ function convertDate(dateStr) {
 
         // check each tag on page
         $("tbody tr").each(function(i, row) {
-            var tag_link = $(this).find("a[href$='/works']").attr("href");
+            var tag_link = $(this).find("a[href$='/works']").attr("href").slice(0, -6);
             var taggings_cell = $(this).find("td[title='taggings']");
             if (page_type == "mass") {
                 var tag_date = new Date($(this).find("td[title='created']").text().split("-"));
@@ -112,7 +112,11 @@ function convertDate(dateStr) {
                 } else if ($(response).find("div.bookmark").length) {
                     taggings_cell.append(" [bookmark]");
 
-                // nothing there, must be a draft
+                // nothing there; is it canonical?
+                } else if ($(response).find("p:contains('It\'s a common tag.')").length) {
+                    taggings_cell.append(" [canonical]")
+
+                // must be a draft
                 } else {
                     taggings_cell.append(" [draft]");
                 }
