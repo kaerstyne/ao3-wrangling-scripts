@@ -70,7 +70,7 @@
 
 ## Hide Canonical Checkboxes
 
-### 2.0 - 2019-04-12
+### 2.0 - 2019-04-13
 
 - Rewritten to be CSS instead of Javascript. Why was it in Javascript. Why did I do this.
 
