@@ -4,6 +4,7 @@
 - [Save Changes at Top](#save-changes-at-top)
 - [Wrangling Home Filter Redux](#wrangling-home-filter-redux)
 - [Check Tag Status](#check-tag-status)
+- [Hide Canonical Checkboxes](#hide-canonical-checkboxes)
 
 ## Highlight Old Tags
 
@@ -66,3 +67,13 @@
 ### 1.0 - 2019-04-11
 
 - Adds a button to check if tags in your wrangling bins are only used on drafts, unrevealed works, etc.
+
+## Hide Canonical Checkboxes
+
+### 2.0 - 2019-04-12
+
+- Rewritten to be CSS instead of Javascript. Why was it in Javascript. Why did I do this.
+
+### 1.0 - 2018-02-28
+
+- Hides the canonical checkbox column on unwrangled tag pages.

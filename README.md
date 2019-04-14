@@ -10,6 +10,7 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 | [Save Changes at Top](#save-changes-at-top) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/save-changes-at-top.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/370820-ao3-wrangling-save-changes-at-top) | 2018-08-01 | [2019-04-12](CHANGELOG.md#save-changes-at-top) |
 | [Wrangling Home Filter Redux](#wrangling-home-filter-redux) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/wrangling-home-filter-redux.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/381543-ao3-wrangling-wrangling-home-filter-redux) | 2019-04-08 | [2019-04-12](CHANGELOG.md#wrangling-home-filter-redux) |
 | [Check Tag Status](#check-tag-status) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/381677-ao3-wrangling-check-tag-status) | 2019-04-11 | [2019-04-12](CHANGELOG.md#check-tag-status) |
+| [Hide Canonical Checkboxes](#hide-canonical-checkboxes) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/hide-canonical-checkboxes.user.css) | 2018-02-28 | [2019-04-12](CHANGELOG.md#hide-canonical-checkboxes) |
 
 ## Highlight Old Tags
 
@@ -55,9 +56,7 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 ## Check Tag Status
 
-<img src="screenshots/check-tag-status1.png" alt="the new button added by the Check Tag Status script" width="478px" height="210px" />
-
-<img src="screenshots/check-tag-status2.png" alt="the Check Status Script's output after the button is pressed" width="478px" height="210px" />
+<img src="screenshots/check-tag-status1.png" alt="the new button added by the Check Tag Status script" width="478px" height="210px" style="margin: 0 5px 5px 0" /><img src="screenshots/check-tag-status2.png" alt="the Check Status Script's output after the button is pressed" width="478px" height="210px" style="margin: 0 5px 5px 0" />
 
 ### Features
 
@@ -77,3 +76,12 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 | unrevealed | tag is only used on unrevealed works |
 | new | **(mass bins only)** tag is only used on works less than two months old |
 | ✔ | none of the above apply, tag is good to go |
+
+## Hide Canonical Checkboxes
+
+<img src="screenshots/hide-canonical-checkboxes1.png" alt="the unwrangled tag page before the script is installed" width="307px" height="176px" style="margin: 0 5px 5px 0" /><img src="screenshots/hide-canonical-checkboxes2.png" alt="the unwrangled tag page after the script is installed, without the column of canonical checkboxes" width="276px" height="176px" style="margin: 0 5px 5px 0" />
+
+### Features
+
+- Hides the canonical checkbox column on unwrangled tag pages, in case you're like me and constantly click on those by accident.
+- Note: This is a CSS style, rather than a script, so you need to have [Stylus](https://add0n.com/stylus.html) or similar installed.

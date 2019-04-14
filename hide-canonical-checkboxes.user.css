@@ -1,0 +1,30 @@
+/* ==UserStyle==
+@name         AO3: [Wrangling] Hide Canonical Checkboxes
+@description  Hides canonical checkboxes on unwrangled tag pages.
+@version      2.0.0
+@updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/hide-canonical-checkboxes.user.css
+
+@author       kaerstyne
+@namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
+@license      GPL-3.0
+@homepageURL  https://github.com/kaerstyne/ao3-wrangling-scripts
+==/UserStyle== */
+
+@-moz-document regexp("https?://(.+\\.)?archiveofourown.org/tags/.+/wrangle\\?.*show=(characters|freeforms).*&status=unwrangled") {
+    td[title="canonical?"] {
+        display: none;
+    }
+    thead th:nth-child(2) {
+        display: none;
+    }
+}
+
+@-moz-document regexp("https?://(.+\\.)?archiveofourown.org/tags/.+/wrangle\\?.*show=relationships.*&status=unwrangled"),
+regexp("https?://(.+\\.)?archiveofourown.org/tag_wranglings.+") {
+    td[title="canonical?"] {
+        display: none;
+    }
+    thead th:nth-child(3) {
+        display: none;
+    }
+}
