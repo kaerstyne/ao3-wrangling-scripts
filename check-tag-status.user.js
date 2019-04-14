@@ -27,11 +27,15 @@ function convertDate(dateStr) {
 
 (function($) {
 
-    // is this a mass bin page?
-    var mass_bins = false;
+    // what kind of wrangling page is this?
     var page_url = window.location.href;
-    if (page_url.includes("tag_wranglings") && !page_url.includes("show=fandoms")) {
-        mass_bins = true;
+    var page_type = "regular";
+    if (page_url.includes("tag_wranglings")) {
+        if (page_url.includes("show=fandoms")) {
+            page_type = "fandoms";
+        } else {
+            page_type = "mass";
+        }
     }
 
     // add the button
@@ -45,7 +49,7 @@ function convertDate(dateStr) {
         $("tbody tr").each(function(i, row) {
             var tag_link = $(this).find("a[href$='/works']").attr("href");
             var taggings_cell = $(this).find("td[title='taggings']");
-            if (mass_bins) {
+            if (page_type == "mass") {
                 var tag_date = new Date($(this).find("td[title='created']").text().split("-"));
             }
 
@@ -68,26 +72,43 @@ function convertDate(dateStr) {
                             taggings_cell.append(" [\u2714]");
                         }
 
+                    // check for Chinese works (fandom bins only)
+                    } else if (page_type == "fandoms") {
+                        var all_chinese = true;
+                        $(response).find("div.work dd.language").each(function() {
+                            if ($(this).text() != "中文") {
+                                all_chinese = false;
+                                return false;
+                            }
+                        });
+                        if (all_chinese) {
+                            taggings_cell.append(" [Chinese]")
+                        } else {
+                            taggings_cell.append(" [\u2714]");
+                        }
+
                     // check for new works (non-fandom mass bins only)
-                    } else if (mass_bins) {
+                    } else if (page_type == "mass") {
 
                         // find the earliest date used on the works
-                        var use_dates = $(response).find("div.work p.datetime").map(function() {
+                        var work_dates = $(response).find("div.work p.datetime").map(function() {
                             return convertDate($(this).text());
                         }).get();
-                        use_dates.sort();
+                        work_dates.sort();
 
                         // compare tag creation date to earliest work date
-                        var work_date = new Date(use_dates[0].split("-"));
+                        var earliest_date = new Date(work_dates[0].split("-"));
                         var date_today = new Date();
-                        var work_age = (date_today - work_date)/(1000*60*60*24);
+                        var work_age = (date_today - earliest_date)/(1000*60*60*24);
 
                         // check if work only posted in the last two months
-                        if (work_date > tag_date && work_age <= 62) {
+                        if (earliest_date > tag_date && work_age <= 62) {
                             taggings_cell.append(" [new]");
                         } else {
                             taggings_cell.append(" [\u2714]");
                         }
+
+                    // just regular ol' works found
                     } else {
                         taggings_cell.append(" [\u2714]");
                     }
