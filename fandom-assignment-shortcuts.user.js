@@ -22,7 +22,7 @@
 
         // add shortcut checkboxes
         var current_fandom = $("h2.heading a").text();
-        var fandoms_to_add = new Array(current_fandom, "No Fandom", "Original Work");
+        var fandoms_to_add = [current_fandom, "No Fandom", "Original Work"];
         var fandom_shortcuts = $('<ul class="filters" style="padding-bottom: .643em;"></ul>');
         for (let fandom of fandoms_to_add) {
             fandom_shortcuts.append('<li style="display: inline"><label>' +
