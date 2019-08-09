@@ -11,6 +11,7 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 | [Wrangling Home Filter Redux](#wrangling-home-filter-redux) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/wrangling-home-filter-redux.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/381543-ao3-wrangling-wrangling-home-filter-redux) | 2019-04-08 | [2019-04-12](CHANGELOG.md#wrangling-home-filter-redux) |
 | [Check Tag Status](#check-tag-status) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/381677-ao3-wrangling-check-tag-status) | 2019-04-11 | [2019-04-14](CHANGELOG.md#check-tag-status) |
 | [Hide Canonical Checkboxes](#hide-canonical-checkboxes) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/hide-canonical-checkboxes.user.css) | 2018-02-28 | [2019-04-13](CHANGELOG.md#hide-canonical-checkboxes) |
+| [Fandom Assignment Shortcuts](#fandom-assignment-shortcuts) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/fandom-assignment-shortcuts.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/388351-ao3-wrangling-fandom-assignment-shortcuts) | 2019-08-09 | [2019-08-09](CHANGELOG.md#fandom-assignment-shortcuts) |
 
 ## Highlight Old Tags
 
@@ -89,3 +90,17 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 
 - Hides the canonical checkbox column on unwrangled tag pages, in case you're like me and constantly click on those by accident.
 - Note: This is a CSS style, rather than a script, so you need to have [Stylus](https://add0n.com/stylus.html) or similar installed.
+
+## Fandom Assignment Shortcuts
+
+<img src="screenshots/fandom-assignment-shortcuts1.png" alt="the tag edit page with the new checkboxes added by the Fandom Assignment Shortcuts script" width="496px" height="208px" /> <img src="screenshots/fandom-assignment-shortcuts2.png" alt="the unwrangled tags page with the new options added by the Fandom Assignment Shortcuts script" width="638px" height="238px" />
+
+### Features
+
+- Tries to save you from having to type the same things over and over when sending tags to fandoms, by adding options to quickly select the most likely fandoms.
+- On tag edit pages, adds checkboxes by each suggested fandom.
+- On unwrangled bin pages, adds checkboxes for the current fandom, No Fandom, and Original Work to the Wrangle to Fandom(s) section.
+
+### Warnings
+
+- You cannot send tags to non-canonical fandoms. If you select the checkbox for a non-canonical fandom on a tag edit page, you'll get an error message when you save your changes. Be careful which options you check!

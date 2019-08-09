@@ -82,3 +82,9 @@
 ### 1.0 - 2018-02-28
 
 - Hides the canonical checkbox column on unwrangled tag pages.
+
+## Fandom Assignment Shortcuts
+
+### 1.0 - 2019-08-09
+
+- Adds checkboxes to quickly select the most likely fandoms when sending tags to fandoms via the unwrangled bins or tag edit pages.
