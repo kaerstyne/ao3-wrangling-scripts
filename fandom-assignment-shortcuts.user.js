@@ -7,8 +7,8 @@
 // @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
 // @license      GPL-3.0 <https://www.gnu.org/licenses/gpl.html>
 
-// @match        *://*archiveofourown.org/tags/*/edit
-// @match        *://*archiveofourown.org/tags/*/wrangle*&status=unwrangled
+// @match        *://*.archiveofourown.org/tags/*/edit
+// @match        *://*.archiveofourown.org/tags/*/wrangle*&status=unwrangled
 // @grant        none
 // ==/UserScript==
 
