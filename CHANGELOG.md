@@ -85,6 +85,10 @@
 
 ## Fandom Assignment Shortcuts
 
+### 1.0.1 - 2019-08-09
+
+- More recent versions of Greasemonkey apparently don't play nice with `window.jQuery`, so changed it back to just using `@require` to load the jQuery.
+
 ### 1.0 - 2019-08-09
 
 - Adds checkboxes to quickly select the most likely fandoms when sending tags to fandoms via the unwrangled bins or tag edit pages.

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Fandom Assignment Shortcuts
 // @description  Adds some shortcuts to assign tags to fandoms more quickly.
-// @version      1.0
+// @version      1.0.1
 
 // @author       kaerstyne
 // @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
@@ -9,6 +9,7 @@
 
 // @match        *://*.archiveofourown.org/tags/*/edit
 // @match        *://*.archiveofourown.org/tags/*/wrangle*&status=unwrangled
+// @require      https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js
 // @grant        none
 // ==/UserScript==
 
@@ -77,4 +78,4 @@
 
     }
 
-})(window.jQuery);
+})(jQuery);
