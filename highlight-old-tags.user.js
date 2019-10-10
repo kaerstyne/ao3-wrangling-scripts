@@ -23,7 +23,7 @@
 var color_new = ""; // default: "" or #C4EAC3
 var color_older = "#FDF2A3"; // default: #FDF2A3
 var color_oldest = "#FFB7B7"; // default: #FFB7B7
-// Reversi
+// Reversi or other dark skin
 var color_new_rev = ""; // default: "" or #228B22
 var color_older_rev = "#999900"; // default: #999900
 var color_oldest_rev = "#8B0000"; // default: #8B0000
@@ -38,26 +38,50 @@ var age_oldest = 14;
 
 // DO THE THING //
 
+// https://stackoverflow.com/questions/4259815/how-do-i-detect-the-inherited-background-color-of-an-element-using-jquery-js
+function getBackgroundColor(jqueryElement) {
+  var color = jqueryElement.css("background-color");
+    if (color !== "rgba(0, 0, 0, 0)") {
+      return color;
+    }
+    if (jqueryElement.is("body")) {
+      return false;
+    } else {
+      return getBackgroundColor(jqueryElement.parent());
+    }
+}
+
+// http://wowmotty.blogspot.com/2009/06/convert-jquery-rgb-output-to-hex-color.html
+// https://24ways.org/2010/calculating-color-contrast/
+function isDarkMode(rgbcolor){
+  rgbcolor = rgbcolor.replace(/\s/g,'').match(/^rgba?\((\d+),(\d+),(\d+)/i);
+  var hexcolor = ("0" + parseInt(rgbcolor[1],10).toString(16)).slice(-2) +
+    ("0" + parseInt(rgbcolor[2],10).toString(16)).slice(-2) +
+    ("0" + parseInt(rgbcolor[3],10).toString(16)).slice(-2);
+  return (parseInt(hexcolor, 16) > 0xffffff/2) ? false:true;
+}
+
 (function($) {
 
-   // swap colors if Reversi stylesheet detected
-   if ($( "link[href*='reversi']" ).length) {
-       color_new = color_new_rev;
-       color_older = color_older_rev;
-       color_oldest = color_oldest_rev;
-   }
+  // swap colors if using a darker color scheme
+  var bgcolor = getBackgroundColor($("td[title='created']"));
+  if (isDarkMode(bgcolor) === true) {
+    color_new = color_new_rev;
+    color_older = color_older_rev;
+    color_oldest = color_oldest_rev;
+  }
 
-   var date_today = new Date();
-   $( "td[title='created']" ).each( function( index, element ){
-       var date_created = new Date($( this ).text().split("-"));
-       var tag_age = (date_today - date_created)/(1000*60*60*24);
+  var date_today = new Date();
+  $( "td[title='created']" ).each( function( index, element ){
+    var date_created = new Date($( this ).text().split("-"));
+    var tag_age = (date_today - date_created)/(1000*60*60*24);
 
-       if (tag_age >= age_oldest) {
-           $( this ).wrapInner("<span style=\"background-color:" + color_oldest + "\"></span>");
-       } else if (tag_age >= age_older) {
-           $( this ).wrapInner("<span style=\"background-color:" + color_older + "\"></span>");
-       } else if (color_new !== "") {
-           $( this ).wrapInner("<span style=\"background-color:" + color_new + "\"></span>");
-       }
-   });
+    if (tag_age >= age_oldest) {
+      $( this ).wrapInner("<span style=\"background-color:" + color_oldest + "\"></span>");
+    } else if (tag_age >= age_older) {
+      $( this ).wrapInner("<span style=\"background-color:" + color_older + "\"></span>");
+    } else if (color_new !== "") {
+      $( this ).wrapInner("<span style=\"background-color:" + color_new + "\"></span>");
+    }
+  });
 })(jQuery);
