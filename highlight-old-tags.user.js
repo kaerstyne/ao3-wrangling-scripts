@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Highlight Old Tags
 // @description  Highlights the created date of older tags in your unwrangled bins.
-// @version      1.1.1
+// @version      1.2
 // @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/highlight-old-tags.user.js
 // @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/highlight-old-tags.user.js
 

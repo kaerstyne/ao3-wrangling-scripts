@@ -8,6 +8,10 @@
 
 ## Highlight Old Tags
 
+### 1.2 - 2019-10-10
+
+- Added a fancier Reversi/dark mode detection method, since the old method stopped working.
+
 ### 1.1.1 - 2019-04-12
 
 - Tidied a bit in honor of uploading to GitHub.
