@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Fandom Assignment Shortcuts
 // @description  Adds some shortcuts to assign tags to fandoms more quickly.
-// @version      1.0.1
+// @version      1.0.2
 
 // @author       kaerstyne
 // @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
@@ -26,8 +26,9 @@
         var fandoms_to_add = [current_fandom, "No Fandom", "Original Work"];
         var fandom_shortcuts = $('<ul class="filters" style="padding-bottom: .643em;"></ul>');
         for (let fandom of fandoms_to_add) {
+            var escaped_fandom = fandom.replace(/"/g, "&quot;");
             fandom_shortcuts.append('<li style="display: inline"><label>' +
-                                    '<input type="checkbox" name="fandom_shortcut" value="' + fandom + '">' +
+                                    '<input type="checkbox" name="fandom_shortcut" value="' + escaped_fandom + '">' +
                                     '<span class="indicator" aria-hidden="true"></span>' +
                                     '<span>' + fandom + '</span>' +
                                     '</label></li>');
@@ -58,8 +59,9 @@
         var suggested_fandoms = $("dt:contains('Suggested Fandoms')").next().find("li");
         suggested_fandoms.each(function() {
             var fandom_link = $(this).html();
+            var escaped_fandom = $(this).text().replace(/"/g, "&quot;");
             $(this).html('<label>' +
-                         '<input type="checkbox" name="fandom_shortcuts" value="' + $(this).text() + '">' +
+                         '<input type="checkbox" name="fandom_shortcuts" value="' + escaped_fandom + '">' +
                          '<span class="indicator" aria-hidden="true"></span>' +
                          '<span>' + fandom_link + '</span>' +
                          '</label>');
