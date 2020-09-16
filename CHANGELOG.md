@@ -60,6 +60,10 @@
 
 ## Check Tag Status
 
+### 1.3 - 2020-09-16
+
+- Updated the Chinese language detection to work with the new language labels.
+
 ### 1.2 - 2019-04-14
 
 - Added a new check to see if a tag is canonical.

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Check Tag Status
 // @description  Adds a button to check if tags in your wrangling bins are in draft, on unrevealed works, etc.
-// @version      1.2
+// @version      1.3
 // @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.user.js
 // @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.user.js
 
@@ -76,7 +76,7 @@ function convertDate(dateStr) {
                     } else if (page_type == "fandoms") {
 
                         var work_languages = $(response).find("div.work dd.language").toArray();
-                        if (work_languages.every(lang => lang.innerHTML == "中文")) {
+                        if (work_languages.every(lang => lang.innerHTML.startsWith("中文"))) {
                             taggings_cell.append(" [Chinese]");
                         } else {
                             taggings_cell.append(" [\u2714]");
