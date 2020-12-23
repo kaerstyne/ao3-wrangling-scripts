@@ -8,6 +8,10 @@
 
 ## Highlight Old Tags
 
+### 1.2.1 - 2020-12-22
+
+- Made a tiny change to the way dates are processed to make it work more consistently across browsers.
+
 ### 1.2 - 2019-10-10
 
 - Added a fancier Reversi/dark mode detection method, since the old method stopped working.

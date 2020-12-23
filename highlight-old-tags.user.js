@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Highlight Old Tags
 // @description  Highlights the created date of older tags in your unwrangled bins.
-// @version      1.2
+// @version      1.2.1
 // @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/highlight-old-tags.user.js
 // @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/highlight-old-tags.user.js
 
@@ -73,7 +73,7 @@ function isDarkMode(rgbcolor){
 
   var date_today = new Date();
   $( "td[title='created']" ).each( function( index, element ){
-    var date_created = new Date($( this ).text().split("-"));
+    var date_created = new Date($( this ).text());
     var tag_age = (date_today - date_created)/(1000*60*60*24);
 
     if (tag_age >= age_oldest) {
