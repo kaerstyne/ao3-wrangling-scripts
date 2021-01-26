@@ -54,6 +54,10 @@
 
 ## Wrangling Home Filter Redux
 
+### 1.0.2 - 2021-01-26
+
+- Updated to work properly with alternating row colors for the table, if the user has a site skin that adds those.
+
 ### 1.0.1 - 2019-04-12
 
 - Tidied a bit in honor of uploading to GitHub.

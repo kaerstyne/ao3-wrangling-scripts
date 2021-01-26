@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Wrangling Home Filter Redux
 // @description  A variation on the Wrangling Home Filter script that lets you filter by cowrangled or solo-wrangled fandoms.
-// @version      1.0.1
+// @version      1.0.2
 // @updateURL    https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/wrangling-home-filter-redux.user.js
 // @downloadURL  https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/wrangling-home-filter-redux.user.js
 
@@ -34,7 +34,18 @@ var cowrangled_list = cowrangled.trim().split("\n");
 
 (function($) {
 
-    var all_fandoms = $("#user-page table tbody tr");
+    var all_fandoms = $(".assigned tbody tr");
+
+    // check if user has applied alternating row colors to the table
+    let alternating_rows = false;
+    if (all_fandoms.eq(0).css("background-color") !== all_fandoms.eq(1).css("background-color")) {
+      alternating_rows = [
+        all_fandoms.children("th[scope='row']").eq(0).css("background-color"), // odd fandom name columns
+        all_fandoms.eq(0).css("background-color"), // odd tag columns
+        all_fandoms.children("th[scope='row']").eq(1).css("background-color"), // even fandom name columns
+        all_fandoms.eq(1).css("background-color") // even tag columns
+      ];
+    }
 
     // label fandoms with shared and unwrangled status
     all_fandoms.each(function() {
@@ -66,6 +77,14 @@ var cowrangled_list = cowrangled.trim().split("\n");
             classes_to_hide.forEach(function(class_to_hide) {
                 $(class_to_hide).hide();
             });
+            // reapply alternating colors if applicable
+            if (alternating_rows) {
+              // fun fact, in jQuery the indexes are 0-based so the even/odd designations are backwards from vanilla CSS
+              all_fandoms.children("th[scope='row']:visible:even").css("background-color", alternating_rows[0]);
+              all_fandoms.filter(":visible:even").css("background-color", alternating_rows[1]);
+              all_fandoms.children("th[scope='row']:visible:odd").css("background-color", alternating_rows[2]);
+              all_fandoms.filter(":visible:odd").css("background-color", alternating_rows[3]);
+            }
             $("#filter-fandoms").find("a").css("font-weight", "normal");
             $(this).css("font-weight", "bold");
         });
