@@ -101,6 +101,10 @@
 
 ## Fandom Assignment Shortcuts
 
+### 1.1 - 2021-03-04
+
+- Added No Fandom and Original Work shortcuts to all tag edit pages.
+
 ### 1.0.2 - 2019-11-08
 
 - The checkbox values didn't account for fandom canonicals with quotation marks, so the script would choke if you tried to send tags to one of those fandoms. Quotation marks are now properly escaped and those fandoms work fine.

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3: [Wrangling] Fandom Assignment Shortcuts
 // @description  Adds some shortcuts to assign tags to fandoms more quickly.
-// @version      1.0.2
+// @version      1.1
 
 // @author       kaerstyne
 // @namespace    https://github.com/kaerstyne/ao3-wrangling-scripts
@@ -54,18 +54,24 @@
     // tag edit page
     } else if (page_url.includes("/edit")) {
 
+        function create_fandom_checkbox(name, url) {
+          const escaped_name = name.replace(/"/g, "&quot;");
+          return $("<li></li>").html(`<label>
+                               <input type="checkbox" name="fandom_shortcuts" value="${escaped_name}">
+                               <span class="indicator" aria-hidden="true"></span>
+                               <span><a class="tag" href="${url}">${name}</a></span>
+                               </label>`);
+        }
+
         // add shortcut checkboxes
-        $("dt:contains('Suggested Fandoms')").next().find("ul").addClass("filters");
-        var suggested_fandoms = $("dt:contains('Suggested Fandoms')").next().find("li");
-        suggested_fandoms.each(function() {
-            var fandom_link = $(this).html();
-            var escaped_fandom = $(this).text().replace(/"/g, "&quot;");
-            $(this).html('<label>' +
-                         '<input type="checkbox" name="fandom_shortcuts" value="' + escaped_fandom + '">' +
-                         '<span class="indicator" aria-hidden="true"></span>' +
-                         '<span>' + fandom_link + '</span>' +
-                         '</label>');
-        });
+        const fandom_list = $("dt:contains('Suggested Fandoms')").next().find("ul");
+        fandom_list.addClass("filters");
+        var suggested_fandoms = $("dt:contains('Suggested Fandoms')").next().find("li").map(function() {
+          return [[ $(this).text(), $(this).find("a")[0].href ]];
+        }).get();
+        suggested_fandoms.push(["No Fandom", "/tags/No%20Fandom/edit"]);
+        suggested_fandoms.push(["Original Work", "/tags/Original%20Work/edit"]);
+        fandom_list.html(suggested_fandoms.map(([name, link]) => create_fandom_checkbox(name, link)));
 
         // add fandoms on form submit
         $("form#edit_tag").submit(function() {
