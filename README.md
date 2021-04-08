@@ -12,6 +12,7 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 | [Check Tag Status](#check-tag-status) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/check-tag-status.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/381677-ao3-wrangling-check-tag-status) | 2019-04-11 | [2020-09-16](CHANGELOG.md#check-tag-status) |
 | [Hide Canonical Checkboxes](#hide-canonical-checkboxes) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/hide-canonical-checkboxes.user.css) | 2018-02-28 | [2019-04-13](CHANGELOG.md#hide-canonical-checkboxes) |
 | [Fandom Assignment Shortcuts](#fandom-assignment-shortcuts) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/fandom-assignment-shortcuts.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/388351-ao3-wrangling-fandom-assignment-shortcuts) | 2019-08-09 | [2021-03-04](CHANGELOG.md#fandom-assignment-shortcuts) |
+| [Prevent Curly Quotes](#prevent-curly-quotes) | [GitHub](https://raw.githubusercontent.com/kaerstyne/ao3-wrangling-scripts/master/prevent-curly-quotes.user.js) &#124; [Greasy Fork](https://greasyfork.org/en/scripts/424720-ao3-wrangling-prevent-curly-quotes) | 2021-04-08 | [2021-04-08](CHANGELOG.md#prevent-curly-quotes) |
 
 ## Highlight Old Tags
 
@@ -104,3 +105,15 @@ If you use any of these and run into problems, feel free to ping me in OTW chat 
 ### Warnings
 
 - You cannot send tags to non-canonical fandoms. If you select the checkbox for a non-canonical fandom on a tag edit page, you'll get an error message when you save your changes. Be careful which options you check!
+
+
+## Prevent Curly Quotes
+
+<img src="screenshots/prevent-curly-quotes1.jpg" alt="the tag edit page with a warning below the tag name field indicating that the tag contains a curly quote" width="500px" height="255px" /> <img src="screenshots/prevent-curly-quotes2.jpg" alt="the tag edit page with a warning below the synonym of field indicating that the tag contains a curly quote" width="500px" height="150px" /> <img src="screenshots/prevent-curly-quotes3.jpg" alt="the mass wrangle page with the canonical checkbox for one tag replaced with the text 'curly quote'" width="500px" height="195px" />
+
+### Features
+
+- Helps prevent you from accidentally making new canonicals with curly quotes.
+- On tag edit pages, will warn you if you try to check the canonical checkbox for a tag that has curly quotes, or if you enter a tag with curly quotes in the Synonym Of field. The warning also includes a fixed version of the tag with straight quotes for easy copy/pasting.
+- On the New Tag page, automatically replaces any curly quotes with straight quotes when you submit the form with the Canonical box checked.
+- On mass wrangle pages, replaces the Canonical checkbox with the text "Curly Quote" for any tag that contains curly quotes.

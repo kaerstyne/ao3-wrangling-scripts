@@ -5,6 +5,8 @@
 - [Wrangling Home Filter Redux](#wrangling-home-filter-redux)
 - [Check Tag Status](#check-tag-status)
 - [Hide Canonical Checkboxes](#hide-canonical-checkboxes)
+- [Fandom Assignment Shortcuts](#fandom-assignment-shortcuts)
+- [Prevent Curly Quotes](#prevent-curly-quotes)
 
 ## Highlight Old Tags
 
@@ -116,3 +118,9 @@
 ### 1.0 - 2019-08-09
 
 - Adds checkboxes to quickly select the most likely fandoms when sending tags to fandoms via the unwrangled bins or tag edit pages.
+
+## Prevent Curly Quotes
+
+### 1.0 - 2021-04-08
+
+- Warns you about or prevents you from making new canonicals containing curly quotes.

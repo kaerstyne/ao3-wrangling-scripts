@@ -46,7 +46,6 @@ if (window.location.pathname.match(/tags\/.+\/edit/)) {
     }
   });
 
-  // just automatically change it for you
   // warn if a tag with curly quotes is entered in Synonym Of
   const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
